@@ -96,10 +96,15 @@ After identifying the vulnerabilities, I uninstalled the outdated software and p
    - **Vulnerabilities Found After Software Removal**: 52
    - [View PDF](https://github.com/Jacob-Brown-950/Qualys-Lab/raw/main/Authenticated%20Scan%20After%20Removing%20Outdated%20Software.pdf)
 
-### Patching Windows Update Vulnerabilities
+### Patching and Configuration Changes
 
-I also noticed some vulnerabilities related to missing Windows security updates. After applying those patches, I ran one last scan:
-   - **Final Vulnerabilities After Windows Updates**: 11
+I also noticed vulnerabilities related to missing Windows security updates and certain settings. After applying those patches and making some registry and configuration changes, I ran one last scan:
+   - Changes Made:
+     - Set Allow deployment of unsigned packages to Disabled.
+     - Changed default local account names.
+     - Disabled SMBv1 and ensured SMB Signing.
+     - Adjusted Autoplay Settings.
+   - **Final Vulnerabilities After Updates and Changes**: 11
    - [View PDF](https://github.com/Jacob-Brown-950/Qualys-Lab/raw/main/Authenticated%20Scan%20After%20Updates.pdf)
 
 ## Conclusion
