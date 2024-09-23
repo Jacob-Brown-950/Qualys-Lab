@@ -83,25 +83,24 @@ With my VM ready and the vulnerabilities in place, it was time to set up Qualys:
 Once everything was set up, I ran a couple of scans to see what vulnerabilities popped up:
 
 1. **Unauthenticated Scan**: This gave me a glimpse of open ports but not much detail on vulnerabilities.
+   - **Vulnerabilities Found**: 2
+   - [View PDF](https://github.com/Jacob-Brown-950/Qualys-Lab/raw/main/Regular%20Scan%20(Not%20Authenticated).pdf)
+
 2. **Authenticated Scan**: This scan really highlighted the outdated applications I had installed.
-
-### Scan Results
-
-- **Not Authenticated Scan**: [View PDF](https://github.com/Jacob-Brown-950/Qualys-Lab/raw/main/Regular%20Scan%20(Not%20Authenticated).pdf)
-- Total of 22 vulnerabilities
-- **Authenticated Scan**: [View PDF](https://github.com/Jacob-Brown-950/Qualys-Lab/raw/main/Authenticated%20Scan.pdf)
+   - **Vulnerabilities Found**: 120
+   - [View PDF](https://github.com/Jacob-Brown-950/Qualys-Lab/raw/main/Authenticated%20Scan.pdf)
 
 ## Remediation
 
 After identifying the vulnerabilities, I uninstalled the outdated software and performed another authenticated scan to check my progress:
-
-- **Authenticated Scan After Software Removal**: [View PDF](https://github.com/Jacob-Brown-950/Qualys-Lab/raw/main/Authenticated%20Scan%20After%20Removing%20Outdated%20Software.pdf)
+   - **Vulnerabilities Found After Software Removal**: 52
+   - [View PDF](https://github.com/Jacob-Brown-950/Qualys-Lab/raw/main/Authenticated%20Scan%20After%20Removing%20Outdated%20Software.pdf)
 
 ### Patching Windows Update Vulnerabilities
 
 I also noticed some vulnerabilities related to missing Windows security updates. After applying those patches, I ran one last scan:
-
-- **Final Scan After Windows Updates**: [View PDF](https://github.com/Jacob-Brown-950/Qualys-Lab/raw/main/Authenticated%20Scan%20After%20Updates.pdf)
+   - **Final Vulnerabilities After Windows Updates**: 11
+   - [View PDF](https://github.com/Jacob-Brown-950/Qualys-Lab/raw/main/Authenticated%20Scan%20After%20Updates.pdf)
 
 ## Conclusion
 
