@@ -87,20 +87,20 @@ Once everything was set up, I ran a couple of scans to see what vulnerabilities 
 
 ### Scan Results
 
-- **Not Authenticated Scan**: [View PDF]([https://github.com/Jacob-Brown-950/Qualys-Lab/raw/main/unauthenticated_scan.pdf](https://github.com/Jacob-Brown-950/Qualys-Lab/blob/main/Regular%20Scan%20(Not%20Authenticated).pdf)
-- **Authenticated Scan**: [View PDF]([https://github.com/Jacob-Brown-950/Qualys-Lab/raw/main/authenticated_scan.pdf](https://github.com/Jacob-Brown-950/Qualys-Lab/blob/main/Authenticated%20Scan.pdf)
+- **Not Authenticated Scan**: [View PDF](https://github.com/Jacob-Brown-950/Qualys-Lab/raw/main/Regular%20Scan%20(Not%20Authenticated).pdf)
+- **Authenticated Scan**: [View PDF](https://github.com/Jacob-Brown-950/Qualys-Lab/raw/main/Authenticated%20Scan.pdf)
 
 ## Remediation
 
 After identifying the vulnerabilities, I uninstalled the outdated software and performed another authenticated scan to check my progress:
 
-- **Authenticated Scan After Software Removal**: [View PDF]([https://github.com/yourusername/yourrepo/raw/main/authenticated_scan_after_removal.pdf](https://github.com/Jacob-Brown-950/Qualys-Lab/blob/main/Authenticated%20Scan%20After%20Removing%20Outdated%20Software.pdf))
+- **Authenticated Scan After Software Removal**: [View PDF](https://github.com/Jacob-Brown-950/Qualys-Lab/raw/main/Authenticated%20Scan%20After%20Removing%20Outdated%20Software.pdf)
 
 ### Patching Windows Update Vulnerabilities
 
 I also noticed some vulnerabilities related to missing Windows security updates. After applying those patches, I ran one last scan:
 
-- **Final Scan After Windows Updates**: [View PDF]([https://github.com/yourusername/yourrepo/raw/main/final_scan.pdf](https://github.com/Jacob-Brown-950/Qualys-Lab/blob/main/Authenticated%20Scan%20After%20Updates.pdf))
+- **Final Scan After Windows Updates**: [View PDF](https://github.com/Jacob-Brown-950/Qualys-Lab/raw/main/Authenticated%20Scan%20After%20Updates.pdf)
 
 ## Conclusion
 
