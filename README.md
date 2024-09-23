@@ -2,21 +2,25 @@
 
 ## Objective
 
-The goal of this project is to set up a vulnerability management lab using Qualys Community Edition. This home lab is designed to simulate a Windows 10 environment where outdated software is intentionally installed to create vulnerability flags. By doing this, I aim to gain practical experience in identifying and remediating vulnerabilities, a critical skill for my career as an entry-level IT technician.
+Welcome to my Vulnerability Management Lab! In this project, I set up a lab using Qualys Community Edition to practice identifying and remediating vulnerabilities in a Windows 10 environment. This hands-on experience is perfect for anyone looking to dive into the world of vulnerability management—especially for those of us starting our careers in IT!
 
 ### Skills Learned
 
-- Understanding of vulnerability management processes.
-- Practical experience with Qualys for vulnerability scanning.
-- Knowledge of configuring virtual machines and networking.
-- Experience in identifying and remediating software vulnerabilities.
-- Insight into the importance of regular software updates and patches.
+Through this project, I picked up some valuable skills, including:
+
+- Understanding how vulnerability management works in real-world scenarios.
+- Gaining practical experience with Qualys for scanning vulnerabilities.
+- Learning to configure virtual machines and set up networking.
+- Identifying and fixing software vulnerabilities.
+- Recognizing the importance of keeping applications and operating systems up to date.
 
 ### Tools Used
 
-- **Qualys Community Edition**: For vulnerability scanning.
-- **Oracle VirtualBox**: To simulate a Windows 10 machine.
-- **Outdated Software**: VLC Media Player (version 1.1.1) and Firefox (version 1.4.0) to create vulnerabilities.
+Here’s a quick look at the tools I used for this lab:
+
+- **Qualys Community Edition**: This is my go-to for vulnerability scanning.
+- **Oracle VirtualBox**: Perfect for simulating a Windows 10 environment.
+- **Outdated Software**: I intentionally used older versions of VLC Media Player (version 1.1.1) and Firefox (version 1.4.0) to create some vulnerability flags.
 
 ## Table of Contents
 
@@ -30,64 +34,56 @@ The goal of this project is to set up a vulnerability management lab using Qualy
 
 ## Introduction
 
-This guide outlines the steps taken to set up a vulnerability management lab. The focus is on using Qualys Community Edition to scan a Windows 10 virtual machine with intentionally outdated software.
+In this guide, I’ll walk you through the steps I took to set up my vulnerability management lab. It’s all about simulating a Windows 10 environment where I could play around with intentionally outdated software.
 
 ## Setting Up the Windows 10 VM
 
+First things first, we need a Windows 10 virtual machine (VM). Here’s how I got that rolling:
+
 1. **Download Oracle VirtualBox**:
-   - Visit the [Oracle VirtualBox website](https://www.virtualbox.org/) and download the latest version for your operating system.
-   - Follow the installation instructions provided on the site.
+   - Head over to the [Oracle VirtualBox website](https://www.virtualbox.org/) and grab the latest version that fits your OS. Installation is pretty straightforward—just follow the prompts!
 
-2. **Obtain a Windows 10 ISO File**:
-   - You can download a Windows 10 ISO from the [Microsoft website](https://www.microsoft.com/en-us/software-download/windows10). 
-   - Choose the edition and language you prefer, and follow the prompts to download.
+2. **Get a Windows 10 ISO File**:
+   - You can download the Windows 10 ISO from the [Microsoft website](https://www.microsoft.com/en-us/software-download/windows10). Just pick the edition and language you want, and you’re good to go.
 
-3. **Create a Windows 10 VM** in Oracle VirtualBox:
-   - Open VirtualBox and click "New" to create a new VM.
-   - Set the name, type, and version (Windows 10).
-   - Allocate memory (at least 4 GB recommended).
-   - Create a virtual hard disk and set its size (20 GB is a good starting point).
+3. **Create a Windows 10 VM**:
+   - Open up VirtualBox and click "New" to create your VM. Set it up with a name, type, and version (Windows 10). Allocate at least 4 GB of memory for a smooth experience and create a virtual hard disk (20 GB is usually sufficient).
 
-4. **Set the VM to a Static IP Address**:
-   - Go to the network settings of your VM and choose "Bridged Adapter" for network connectivity.
-   - Set a static IP address within your local network settings to avoid issues with DHCP during scanning.
+4. **Set a Static IP Address**:
+   - In the VM's network settings, opt for "Bridged Adapter." This lets your VM communicate on the same network as your host machine. I recommend setting a static IP to avoid any DHCP issues later.
 
 ## Creating Vulnerabilities
 
-To simulate vulnerabilities, I intentionally downloaded outdated versions of software:
+Now for the fun part—creating some vulnerabilities! Here’s how I did it:
 
-1. **VLC Media Player (version 1.1.1)**:
-   - Visit the [VLC Releases](https://download.videolan.org/pub/videolan/vlc/1.1.1/) page.
-   - Download the appropriate installer for Windows and install it in your VM.
+1. **Download VLC Media Player (version 1.1.1)**:
+   - I went to the [VLC Releases](https://download.videolan.org/pub/videolan/vlc/1.1.1/) page, grabbed the installer for Windows, and set it up in my VM.
 
-2. **Firefox Browser (version 1.4.0)**:
-   - Navigate to the [Mozilla Firefox Releases](https://ftp.mozilla.org/pub/firefox/releases/1.0.4/) directory.
-   - Download the Windows installer for version 1.4.0 and install it in your VM.
+2. **Install Firefox (version 1.4.0)**:
+   - Next, I visited the [Mozilla Firefox Releases](https://ftp.mozilla.org/pub/firefox/releases/1.0.4/) directory to get the Windows installer for version 1.4.0. After downloading, I installed it in the VM as well.
 
 ## Qualys Virtual Scanner Setup
 
-1. **Download and Set Up Qualys Community Edition**:
-   - Go to the [Qualys Community Edition page](https://www.qualys.com/community-edition/) and sign up for an account.
-   - Follow the prompts to create your account and download the virtual scanner.
+With my VM ready and the vulnerabilities in place, it was time to set up Qualys:
 
-2. **Import the Virtual Scanner into VirtualBox**:
-   - After downloading the Qualys scanner, open VirtualBox and select "Import Appliance."
-   - Choose the Qualys scanner file and follow the instructions to import it.
+1. **Sign Up for Qualys Community Edition**:
+   - Go to the [Qualys Community Edition page](https://www.qualys.com/community-edition/) and create your account. It’s free and gives you access to some awesome tools!
+
+2. **Set Up the Qualys Virtual Scanner**:
+   - After signing up, download the virtual scanner. Then, in VirtualBox, select "Import Appliance" and choose the scanner file to import it into your setup.
 
 3. **Configure an IP Range in Qualys**:
-   - Log into your Qualys account.
-   - Go to the "Scans" section and create a new scan by specifying the IP range that includes your Windows 10 VM.
+   - Log into your Qualys account, navigate to the "Scans" section, and create a new scan by specifying the IP range that includes your Windows 10 VM.
 
-4. **Disable the Windows Firewall Temporarily**:
-   - To allow the scans to run effectively, you may need to disable the Windows Firewall on your VM:
-     - Go to Control Panel > System and Security > Windows Defender Firewall > Turn Windows Defender Firewall on or off.
+4. **Disable Windows Firewall Temporarily**:
+   - To make sure the scans go smoothly, I disabled the Windows Firewall on the VM. You can do this by going to Control Panel > System and Security > Windows Defender Firewall > Turn Windows Defender Firewall on or off.
 
 ## Running the Scans
 
-I performed the following scans:
+Once everything was set up, I ran a couple of scans to see what vulnerabilities popped up:
 
-1. **Unauthenticated Scan**: Identified open ports but provided limited information.
-2. **Authenticated Scan**: Detected vulnerabilities in the outdated applications.
+1. **Unauthenticated Scan**: This gave me a glimpse of open ports but not much detail on vulnerabilities.
+2. **Authenticated Scan**: This scan really highlighted the outdated applications I had installed.
 
 ### Scan Results
 
@@ -96,16 +92,16 @@ I performed the following scans:
 
 ## Remediation
 
-After identifying the vulnerabilities, I removed the outdated software and ran another authenticated scan to verify remediation:
+After identifying the vulnerabilities, I uninstalled the outdated software and performed another authenticated scan to check my progress:
 
 - **Authenticated Scan After Software Removal**: [View PDF](https://github.com/yourusername/yourrepo/raw/main/authenticated_scan_after_removal.pdf)
 
 ### Patching Windows Update Vulnerabilities
 
-I also noticed vulnerabilities due to missing Windows security updates. After installing the necessary patches, I ran a final scan:
+I also noticed some vulnerabilities related to missing Windows security updates. After applying those patches, I ran one last scan:
 
 - **Final Scan After Windows Updates**: [View PDF](https://github.com/yourusername/yourrepo/raw/main/final_scan.pdf)
 
 ## Conclusion
 
-Through this project, I successfully identified and remediated several vulnerabilities. It emphasizes the importance of keeping both applications and operating systems up to date to minimize security risks. This hands-on experience is invaluable as I continue to build my skills in vulnerability management.
+Through this project, I successfully identified and fixed several vulnerabilities. It really drove home the importance of keeping both applications and operating systems up to date to minimize security risks. I hope this guide inspires you to set up your own vulnerability management lab and start your journey in IT!
