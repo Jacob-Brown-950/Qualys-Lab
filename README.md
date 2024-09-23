@@ -1,4 +1,4 @@
-# Vulnerability Management Lab
+# Qualys-Lab
 
 ## Objective
 
