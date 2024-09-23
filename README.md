@@ -88,6 +88,7 @@ Once everything was set up, I ran a couple of scans to see what vulnerabilities 
 ### Scan Results
 
 - **Not Authenticated Scan**: [View PDF](https://github.com/Jacob-Brown-950/Qualys-Lab/raw/main/Regular%20Scan%20(Not%20Authenticated).pdf)
+- Total of 22 vulnerabilities
 - **Authenticated Scan**: [View PDF](https://github.com/Jacob-Brown-950/Qualys-Lab/raw/main/Authenticated%20Scan.pdf)
 
 ## Remediation
