@@ -8,11 +8,11 @@ Welcome to my Vulnerability Management Lab! In this project, I set up a lab usin
 
 Through this project, I picked up some valuable skills, including:
 
-- Understanding how vulnerability management works in real-world scenarios.
-- Gaining practical experience with Qualys for scanning vulnerabilities.
-- Learning to configure virtual machines and set up networking.
-- Identifying and fixing software vulnerabilities.
-- Recognizing the importance of keeping applications and operating systems up to date.
+- **Installed and Deployed Qualys Virtual Scanner Appliance**: Successfully imported the scanner into VirtualBox and accessed it via the Qualys Cloud Platform.
+- **Executed the Vulnerability Management Lifecycle**: Gained experience in the stages of Discovery, Prioritization, Assessment, Reporting, Remediation, and Verification within a virtualized environment.
+- **Leveraged Qualys for Vulnerability Management**: Managed vulnerability scanning and effectively addressed identified vulnerabilities.
+- **Identified Deprecated Software**: Detected outdated software on a Windows 10 machine, remediated the vulnerabilities, and verified that the software was no longer vulnerable.
+- **Understanding the Importance of Updates**: Recognized the significance of keeping applications and operating systems up to date to minimize security risks.
 
 ### Tools Used
 
