@@ -18,7 +18,7 @@ Through this project, I picked up some valuable skills, including:
 
 Here’s a quick look at the tools I used for this lab:
 
-- **Qualys Community Edition**: This is my go-to for vulnerability scanning.
+- **Qualys Community Edition**: Common tool for vulnerability scanning.
 - **Oracle VirtualBox**: Perfect for simulating a Windows 10 environment.
 - **Outdated Software**: I intentionally used older versions of VLC Media Player (version 1.1.1) and Firefox (version 1.4.0) to create some vulnerability flags.
 
